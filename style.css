@@ -1,0 +1,370 @@
+.header {
+    background-color: #ffffff;
+    font-family: Taviraj, Georgia, Times, serif;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+
+  }
+  
+
+  .topnav {
+    overflow: auto;
+    background-color: #C1A584;
+    text-align: center;
+    padding-right: 50px;
+   
+  }
+  
+  .topnav a {
+    float: left; 
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    
+  }
+  
+  .topnav a:hover {
+    background-color: white;
+    color: #CD853F;
+  }
+  
+  .topnav a:active {
+    background-color: lightpink;
+    color: white;
+    
+  }
+
+  body {
+
+    background-color:#f8f1EE;
+    padding: 50px;
+
+ }
+
+ h1 {
+  font-family: Taviraj, Georgia, Times, serif;}
+
+ .recipeofthemonth {
+  
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+.recipeofthemonth p{
+  font-family:'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+
+.trending {
+  
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+.blog p{
+  font-family:  Taviraj, Georgia, Times, serif;
+  margin: 10px;
+}
+
+.about_me {
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+.mycourses{
+
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+caption{
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 0;
+  margin:0;
+  display: inline-block;
+  
+  
+} 
+
+li{ 
+ 
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  background-color: #FFF0F5;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+
+}
+
+th, td{
+  border: 1px solid black ;
+  text-align: right;
+  width: 25%;
+  padding: 12px;
+
+}
+
+th {
+  
+  font-weight: bold;
+  background-color: #DB7093;
+}
+
+  
+  .footer {
+    background-color: #C1A584;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #CC313D;
+    background-color: #F7C5CC;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    
+    text-align: left;
+    padding: 10px;
+    
+  }
+
+ 
+
+  .hobby {
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+  }
+
+  .hobby ul li{
+
+    padding: 10px;
+    margin-left: 35px;
+    
+
+  }
+  
+  
+
+  .outdooractivities{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    color:#317773;
+    padding: 20px;
+    
+  }
+
+  .indooractivities{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    color:#832B00;
+    padding: 20px;
+  }
+
+
+  .websites{
+
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+
+
+  }
+
+  .websites ul{
+    padding: 10px;
+    
+  }
+
+  .websites li{
+    padding:10px;
+    font-size: 16px;
+    
+    
+  }
+ 
+  .websites li a {
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .websites a:hover {
+    background-color: #FCEDDA;
+    color:  #EE4E34;
+    
+  }
+  .gallery{
+
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+  }
+  img {
+    border: 5px solid #ccc;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+  }
+
+  .video-section {
+    border: 5px solid #ccc;
+    width: 500px;
+    height: 300px;
+    padding: 8px;
+    padding-top:0;
+    margin : 10px;
+    border-radius: 10px;
+  }
+
+  .video-section video {
+    
+    width: 500px;
+    height: 300px;
+    
+    
+  }
+
+
+  .contact{
+    font-family: Taviraj, Georgia, Times, serif;
+    background-color: #ffffff;
+    margin-top: 50px;
+    text-align: left;
+    margin-bottom: 50px;
+    border: 3px solid #BC8F8F;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  input[type=text],textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+  }
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+  }
+  input[type=confirmpassword] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+  }
+  input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+  }
+
+  input[type=submit]{
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+
+  }
+
+  .login{
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+  }
+
+  .registration{
+
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  margin-bottom: 50px;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+  }
