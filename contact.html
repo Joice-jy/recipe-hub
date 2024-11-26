@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Personal Profile</title>
     <link rel="stylesheet" href="style.css">
-    <script href="script.js" defer></script>
+    <script href="script.js"></script>
 
 
 </head>
@@ -19,46 +19,39 @@
             <a href="recipes.html">Recipes</a>
             <a href="account.html">My Account</a>
             <a href="contact.html">Contact Us</a>
+            <a href="register.html">Registration</a>
             <a href="submit.html">Submit Recipe</a>
-            <a href="login.html">Login</a>
             <a href="javascript:void(0)" id="logout-link">Logout</a>
         
         </div>
     </div>
 
-    <div class ="recipeofthemonth">
-        <h1>Recipe Of the Month</h1><br>
-
-        <p> test <br><br>
-            </p>
+    <div class ="contactForm">
+        <h1>Contact Us</h1><br>
+        <fieldset>
+        
+        
+            <form id="contactForm">
+                <label for="name">Name: </label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                
+                <label for="subject">Subject: </label><br>
+                <input type="text" id="subject" name="subject" placeholder="Enter the Subject" required><br><br>
+    
+                <label for="message">Message: </label><br>
+                <textarea id="message" name="message" placeholder="Enter the Message" required></textarea><br><br>
+    
+                
+                <button type="button" id="sendbtn" onclick="submitContact()">Send</button>
+          
+    
+            </form>
+    
+        </fieldset>
+    
+        <br><div id="contactmsg"></div><br>
     </div>
     
-
-
-    <div class ="trending">
-
-        <h1>Top 3 trending recipes</h1> <br>
-
-        <h2>Recipe1</h2>
-        <p> recipe description
-            <br><br>
-            <a href="https://handluggageonly.co.uk/" target="_blank">Read more>></a></p>
-
-        <h2>Recipe2</h2>
-        <p>recipe description <br><br>
-            
-            <br><br>
-            <a href="https://www.bemytravelmuse.com/" target="_blank">Read more>></a></p>
-
-        <h2>Recipe3</h2>
-        <p>recipe description <br><br>
-            
-            <a href="https://wellnesstravelled.com/" target="_blank">Read more>></a></p>
-
-    </div>
-
-
-
 
 <br>
 
@@ -73,5 +66,6 @@
             Canada
         </address>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

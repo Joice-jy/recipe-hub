@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="register">
+        <h2>Register</h2>
+            <form id="register-form">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>            
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <label for="confirm-password">Confirm Password:</label><br>
+                <input type="password" id="confirm-password" name="confirm-password"><br><br>
+                <button type="submit">Regist</button>
+            </form>
+            <p>Already have an account? 
+                <input type="button" value="Login" onclick="register()">
+            </p>
+    </div>
+<br>
+
+    <!-- Footer -->
+<div class="footer">
+    <p>&copy; 2024 Recipe Hub. All rights reserved.</p>
+    <address>
+        yorku.ca<br>
+        4700 Keele St, North York, ON M3J 1P3<br>
+        Canada
+    </address>
+</div>
+    
+</body>
+</html>
