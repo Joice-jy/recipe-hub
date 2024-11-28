@@ -371,3 +371,51 @@ th {
   padding: 30px;
   border-radius: 10px;
   }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.button:hover {
+    background-color: #45a049; 
+  }
+
+  .filters{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 10px;
+    padding: 25px;
+    background-color: #C1A584;
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+  }
+
+  .recipe-container{
+    margin: 10px;;
+    padding: 80px;
+    background-color: #C1A584;
+    height: 900px;
+    border: 2px solid black;
+    
+  }
+
+  .recipe-image{
+    width: 250px;
+    height: 250px;
+  }
+
+  .recipe-description{
+    width: 200px;
+    height: auto;
+  }

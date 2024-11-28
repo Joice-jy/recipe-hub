@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Recipe Hub</h1>
+        <p> Recipes at your fingertips</p>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="account.html">My Account</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="inbox.html">Inbox</a>
+            <a href="submit.html">Submit Recipe</a>
+            <a href="login.html">Login</a>
+            <a href="javascript:void(0)" id="logout-link">Logout</a>
+        </div>
+    </div>
+
+
+    <h2>Recipe Page</h2>
+    <div class="filters">
+    <div class="meals">
+        <p>Select your meal type:</p>
+        <label><input type="checkbox" name="breakfast" id="breakfast" checked="checked"> Breakfast</label>
+        <label><input type="checkbox" name="lunch" id="lunch"> Lunch</label>
+        <label><input type="checkbox" name="dinner" id="dinner"> Dinner</label>
+        <label><input type="checkbox" name="desserts" id="desserts"> Desserts</label>
+        <label><input type="checkbox" name="snacks" id="snacks"> Snacks</label>
+    </div>
+
+    <div class="ratings">
+        <p>Select your rating:</p>
+        <label><input type="radio" name="rating" value="all" checked> All</label>
+        <label><input type="radio" name="rating" value="5"> 5 Stars</label>
+        <label><input type="radio" name="rating" value="4"> 4 Stars</label>
+        <label><input type="radio" name="rating" value="3"> 3 Stars</label>
+        <label><input type="radio" name="rating" value="2"> 2 Stars</label>
+        <label><input type="radio" name="rating" value="1"> 1 Star</label>
+    </div>
+
+    </div>
+
+    <div class="recipe-container" id="recipeContainer">
+        <div class="recipe-card">
+
+            <img src="pancake.jpg" alt="Pancake_image" class="recipe-image">
+
+            <div class="recipe-description">
+                <h3 class="recipe-title">Buttermilk Pancakes</h3>
+                <p class="recipe-description">Fluffy and golden pancakes served with syrup and topped with butter. A true breakfast classic!</p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="recipe-card">
+
+            <img src="omlette.jpg" alt="omlette.jpg" class="recipe-image">
+            
+            <div class="recipe-description">
+                <h3 class="recipe-title">Buttermilk Pancakes</h3>
+                <p class="recipe-description">Ham and Cheese omlette topped with fresh chopped green onion and a side of potato bites. </p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pageselect">
+        <button id="prevPage" disabled>Previous</button>
+        <button id="nextPage">Next</button>
+    </div>
+</body>
+</html>

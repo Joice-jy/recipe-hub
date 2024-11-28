@@ -28,10 +28,33 @@
     </div>
 
     <div class ="recipesubmission">
-        <h1>Submit Your Recipes</h1><br>
+        <h1>Submit Your Recipes!</h1><br>
 
-        <p>...</p>
+        <p>Share your recipes to our community!</p>
 
+        <fieldset>
+        
+        
+            <form id="submitRecipesForm">
+                <label for="recipeTitle">Recipe Title: </label><br>
+                <input type="text" id="recipeTitle" name="recipeTitle" placeholder="Enter the Recipe Title" required><br><br>
+
+                <label for="username">Username: </label><br>
+                <input type="text" id="username" name="username" placeholder="Enter the Username" required><br><br>
+                
+                <label for="Ingredients">Ingredients: </label><br>
+                <input type="text" id="ingredient" name="ingredient" placeholder="Enter the Ingredients" required><br><br>
+    
+                <label for="recipe">Recipe Directions: </label><br>
+                <textarea id="recipe" name="recipe" placeholder="Enter the Directions" required></textarea><br><br>
+    
+                
+                <button type="button" id="submitbtn" onclick="submitRecipes()">Submit</button>
+          
+    
+            </form>
+    
+        </fieldset>
 
     </div>
     

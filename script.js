@@ -6,6 +6,10 @@ function goToPage(page){
     }
 }
 
+function goToLogin() {
+    window.location.href = "login.html";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     if (!localStorage.getItem("isLoggedIn")) {
         const currentPage = window.location.pathname.split("/").pop();
@@ -50,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("user", JSON.stringify({ username, email, password }));
             localStorage.setItem("isLoggedIn", true);
             alert("Registration successful!");
-            goToPage("home.html");
+            goToPage("index.html");
         });
     }
 
@@ -70,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             localStorage.setItem("isLoggedIn", true);
             alert("Login successful!");
-            goToPage("home.html");
+            goToPage("index.html");
         });
     }
     const logoutLink = document.getElementById("logout-link");
