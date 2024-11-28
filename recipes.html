@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Page</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -26,7 +26,6 @@
 
 
     <h2>Recipe Page</h2>
-    <div class="filters">
     <div class="meals">
         <p>Select your meal type:</p>
         <label><input type="checkbox" name="breakfast" id="breakfast" checked="checked"> Breakfast</label>
@@ -46,8 +45,7 @@
         <label><input type="radio" name="rating" value="1"> 1 Star</label>
     </div>
 
-    </div>
-
+    
     <div class="recipe-container" id="recipeContainer">
         <div class="recipe-card">
 
@@ -65,15 +63,14 @@
                 </div>
             </div>
         </div>
-        <br>
 
         <div class="recipe-card">
 
             <img src="omlette.jpg" alt="omlette.jpg" class="recipe-image">
             
             <div class="recipe-description">
-                <h3 class="recipe-title">Buttermilk Pancakes</h3>
-                <p class="recipe-description">Ham and Cheese omlette topped with fresh chopped green onion and a side of potato bites. </p>
+                <h3 class="recipe-title">Ham and Cheese Omlette</h3>
+                <p class="recipe-description">Ham and Cheese omlette topped with fresh chopped green onion and a side of potato bites </p>
                 <div class="recipe-rating">
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
@@ -83,11 +80,35 @@
                 </div>
             </div>
         </div>
+        
+        <div class="recipe-card">
+
+            <img src="cheese.jpg" alt="cheese.jpg" class="recipe-image">
+            
+            <div class="recipe-description">
+                <h3 class="recipe-title">Grilled Cheese Sandwich</h3>
+                <p class="recipe-description">Classic grilled cheese sandwich made with american cheddar cheese and provolone bread </p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="pageselect">
-        <button id="prevPage" disabled>Previous</button>
-        <button id="nextPage">Next</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Recipe Hub. All rights reserved.</p>
+        <address>
+            Written by <a href="mailto:webmaster@example.com">Recipe Hub</a>.<br> 
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            Canada
+        </address>
     </div>
 </body>
 </html>

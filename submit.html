@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>My Personal Profile</title>
     <link rel="stylesheet" href="style.css">
-    <script href="script.js" defer></script>
+    <script src="script.js" defer></script>
 
 
 </head>
@@ -30,7 +30,8 @@
     <div class ="recipesubmission">
         <h1>Submit Your Recipes!</h1><br>
 
-        <p>Share your recipes to our community!</p>
+        <h2>Share your recipes to our community!</h2><br>
+
 
         <fieldset>
         
@@ -39,15 +40,19 @@
                 <label for="recipeTitle">Recipe Title: </label><br>
                 <input type="text" id="recipeTitle" name="recipeTitle" placeholder="Enter the Recipe Title" required><br><br>
 
-                <label for="username">Username: </label><br>
-                <input type="text" id="username" name="username" placeholder="Enter the Username" required><br><br>
+                <label for="userName">Username: </label><br>
+                <input type="text" id="userName" name="userName" placeholder="Enter the Username" required><br><br>
                 
-                <label for="Ingredients">Ingredients: </label><br>
-                <input type="text" id="ingredient" name="ingredient" placeholder="Enter the Ingredients" required><br><br>
+                <label for="ingredients">Ingredients: </label><br>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Enter the Ingredients" required><br><br>
     
-                <label for="recipe">Recipe Directions: </label><br>
-                <textarea id="recipe" name="recipe" placeholder="Enter the Directions" required></textarea><br><br>
+                <label for="instructions">Recipe Instructions: </label><br>
+                <textarea id="instructions" name="instructions" placeholder="Enter the instructions" required></textarea><br><br>
     
+                <label for="imageFile">Image:</label><br>
+                 <input type="file" id="imageFile" accept="image/*" onchange="uploadImage()" placeholder="Choose image" required>
+                 <button type="button" id="uploadButton" onclick="uploadImage()">Upload</button><br><br>
+
                 
                 <button type="button" id="submitbtn" onclick="submitRecipes()">Submit</button>
           
@@ -59,7 +64,7 @@
     </div>
     
 
-
+<div id="recipemsg"></div><br>
 
 
 
