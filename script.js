@@ -25,6 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("password").value;
             const confirmPassword = document.getElementById("confirm-password").value;
 
+            if (!username) {
+                alert("Username cannot be empty!");
+                return;
+            }
+            if (!email) {
+                alert("Email cannot be empty!");
+                return;
+            }
+            if (!password) {
+                alert("Password cannot be empty!");
+                return;
+            }
+            if (!confirmPassword) {
+                alert("Confirm Password cannot be empty!");
+                return;
+            }
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
                 return;
@@ -86,6 +102,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Account page not detected.");
     }    
 });
+
+//save data as a string with encoded values 
+function setContacts(contacts){
+    localStorage.setItem("contacts", contacts.join("||"));
+}
+
+//retrieve records and split them back into an array 
+function getContacts(){
+    let storedContacts = localStorage.getItem("contacts");
+    return storedContacts ? storedContacts.split("||"):[];
+}
 
 function submitContact(){
     {
