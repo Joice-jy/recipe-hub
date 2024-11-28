@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("user", JSON.stringify({ username, email, password }));
             localStorage.setItem("isLoggedIn", true);
             alert("Registration successful!");
-            goToPage("home.html");
+            goToPage("index.html");
         });
     }
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             localStorage.setItem("isLoggedIn", true);
             alert("Login successful!");
-            goToPage("home.html");
+            goToPage("index.html");
         });
     }
     const logoutLink = document.getElementById("logout-link");
