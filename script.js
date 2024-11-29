@@ -216,7 +216,6 @@ function deleteMessage(index){
     displayInbox();
 }*/
 
-let uploadedImageBase64="";
 function submitRecipes(){
 
     
