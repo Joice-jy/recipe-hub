@@ -40,10 +40,6 @@
     
   }
 
-  p{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
   body {
 
     background-color:#f8f1EE;
@@ -149,117 +145,6 @@ li{
   }
 
  
-
-  .hobby {
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  text-align: left;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-  }
-
-  .hobby ul li{
-
-    padding: 10px;
-    margin-left: 35px;
-    
-
-  }
-  
-  
-
-  .outdooractivities{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    color:#317773;
-    padding: 20px;
-    
-  }
-
-  .indooractivities{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    color:#832B00;
-    padding: 20px;
-  }
-
-
-  .websites{
-
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  text-align: left;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-
-
-
-  }
-
-  .websites ul{
-    padding: 10px;
-    
-  }
-
-  .websites li{
-    padding:10px;
-    font-size: 16px;
-    
-    
-  }
- 
-  .websites li a {
-    text-decoration: none;
-    padding: 10px;
-  }
-
-  .websites a:hover {
-    background-color: #FCEDDA;
-    color:  #EE4E34;
-    
-  }
-  .gallery{
-
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-
-  }
-  img {
-    border: 5px solid #ccc;
-    padding: 5px;
-    margin: 8px;
-    border-radius: 10px;
-  }
-
-  .video-section {
-    border: 5px solid #ccc;
-    width: 500px;
-    height: 300px;
-    padding: 8px;
-    padding-top:0;
-    margin : 10px;
-    border-radius: 10px;
-  }
-
-  .video-section video {
-    
-    width: 500px;
-    height: 300px;
-    
-    
-  }
-
 
   .contact{
     font-family: Taviraj, Georgia, Times, serif;
@@ -411,13 +296,21 @@ form button {
 }
 
 .recipe-card {
-  background-color: white;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  text-align: left;
+  display: flex; 
+  flex-wrap: wrap; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  padding: 15px; 
+  margin-bottom: 20px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+
+.recipe-card h3, .recipe-card h4, .recipe-card h5, .recipe-card p {
+  margin: 10px 0; 
+  color: #333; 
+}
 .recipe-card h3{
   text-align: center;
   font: size 1.5em;
@@ -445,6 +338,13 @@ form button {
   padding: 10px;
 }
 
+.recipe-card img {
+  max-width: 95%; 
+  height: auto; 
+  border-radius: 8px; 
+  margin-left: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
 #inboxContainer {
   max-width: 800px;
   background-color: #ddd;
@@ -514,50 +414,4 @@ form button {
 
 #inboxMessage h2{
   color: #333333;
-}
-  }
-
-  .goal p{
-    text-align: center;
-  }
-
-.recipe-container {
-  margin: 10px;
-  padding: 10px;
-  background-color: #C1A584;
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 20px; 
-  height: auto; 
-  border: 2px solid black;
-}
-
-.recipe-card {
-  display: hidden;
-  background-color: white;
-  padding: 15px;
-  display: none;
-  align-items: center;
-  text-align: center;
-}
-
-.recipe-image {
-  width: 250px; 
-  height: 250px;
-  margin-bottom: 10px; 
-}
-
-.recipe-description {
-  width: 100%; 
-  margin-top: 10px;
-}
-
-.recipe-title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.star {
-  font-size: 1.5em;
-  color: gold;
 }
