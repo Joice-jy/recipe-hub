@@ -26,28 +26,18 @@
 
 
     <h2>Recipe Page</h2>
+    
     <div class="meals">
-        <p>Select your meal type:</p>
-        <label><input type="checkbox" name="breakfast" id="breakfast" checked="checked"> Breakfast</label>
+        <p>Select your preferred meal type:</p>
+        <label><input type="checkbox" name="breakfast" id="breakfast"> Breakfast</label>
         <label><input type="checkbox" name="lunch" id="lunch"> Lunch</label>
         <label><input type="checkbox" name="dinner" id="dinner"> Dinner</label>
-        <label><input type="checkbox" name="desserts" id="desserts"> Desserts</label>
+        <label><input type="checkbox" name="dessert" id="dessert"> Dessert</label>
         <label><input type="checkbox" name="snacks" id="snacks"> Snacks</label>
     </div>
 
-    <div class="ratings">
-        <p>Select your rating:</p>
-        <label><input type="radio" name="rating" value="all" checked> All</label>
-        <label><input type="radio" name="rating" value="5"> 5 Stars</label>
-        <label><input type="radio" name="rating" value="4"> 4 Stars</label>
-        <label><input type="radio" name="rating" value="3"> 3 Stars</label>
-        <label><input type="radio" name="rating" value="2"> 2 Stars</label>
-        <label><input type="radio" name="rating" value="1"> 1 Star</label>
-    </div>
-
-    
     <div class="recipe-container" id="recipeContainer">
-        <div class="recipe-card">
+        <div class="recipe-card" meal-type="breakfast" meal-rating="5">
 
             <img src="pancake.jpg" alt="Pancake_image" class="recipe-image">
 
@@ -64,7 +54,7 @@
             </div>
         </div>
 
-        <div class="recipe-card">
+        <div class="recipe-card" meal-type="breakfast" meal-rating="4">
 
             <img src="omlette.jpg" alt="omlette.jpg" class="recipe-image">
             
@@ -81,7 +71,7 @@
             </div>
         </div>
         
-        <div class="recipe-card">
+        <div class="recipe-card" meal-type="lunch" meal-rating="4">
 
             <img src="cheese.jpg" alt="cheese.jpg" class="recipe-image">
             
@@ -97,6 +87,58 @@
                 </div>
             </div>
         </div>
+        <div class="recipe-card" meal-type="lunch" meal-rating="3">
+
+            <img src="salad.jpg" alt="salad.jpg" class="recipe-image">
+            
+            <div class="recipe-description">
+                <h3 class="recipe-title">Grilled Chicken Salad</h3>
+                <p class="recipe-description">A healthy salad mixed with greens, grilled chicken, avocado, cherry tomatoes, cucumber, and onions.</p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-card" meal-type="dinner" meal-rating="4">
+
+            <img src="lentil.jpg" alt="salad.jpg" class="recipe-image">
+            
+            <div class="recipe-description">
+                <h3 class="recipe-title">Lentil Soup</h3>
+                <p class="recipe-description">Hearty lentil soup with carrots, celery, tomatoes, and a touch of cumin, served with a side of whole-wheat bread.</p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-card" meal-type="snacks" meal-rating="5">
+
+            <img src="ricecake.jpg" alt="salad.jpg" class="recipe-image">
+            
+            <div class="recipe-description">
+                <h3 class="recipe-title">Rice Cake with Banana and Almond Butter</h3>
+                <p class="recipe-description">Plain rice cakes spread with creamy almond butter and topped with a banana slices</p>
+                <div class="recipe-rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     </div>
     </div>
 

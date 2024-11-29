@@ -40,6 +40,10 @@
     
   }
 
+  p{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   body {
 
     background-color:#f8f1EE;
@@ -254,7 +258,6 @@ th {
 
   }
   img {
-    border: 5px solid #ccc;
     padding: 5px;
     margin: 8px;
     border-radius: 10px;
@@ -464,4 +467,50 @@ form button {
 
 #inboxMessage h2{
   color: #333333;
+}
+  }
+
+  .goal p{
+    text-align: center;
+  }
+
+.recipe-container {
+  margin: 10px;
+  padding: 10px;
+  background-color: #C1A584;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+  height: auto; 
+  border: 2px solid black;
+}
+
+.recipe-card {
+  display: hidden;
+  background-color: white;
+  padding: 15px;
+  display: none;
+  align-items: center;
+  text-align: center;
+}
+
+.recipe-image {
+  width: 250px; 
+  height: 250px;
+  margin-bottom: 10px; 
+}
+
+.recipe-description {
+  width: 100%; 
+  margin-top: 10px;
+}
+
+.recipe-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.star {
+  font-size: 1.5em;
+  color: gold;
 }

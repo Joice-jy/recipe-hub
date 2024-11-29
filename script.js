@@ -45,6 +45,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Confirm Password cannot be empty!");
                 return;
             }
+            if (!username) {
+                alert("Username cannot be empty!");
+                return;
+            }
+            if (!email) {
+                alert("Email cannot be empty!");
+                return;
+            }
+            if (!password) {
+                alert("Password cannot be empty!");
+                return;
+            }
+            if (!confirmPassword) {
+                alert("Confirm Password cannot be empty!");
+                return;
+            }
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
                 return;
@@ -110,6 +126,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+//save data as a string with encoded values 
+function setContacts(contacts){
+    localStorage.setItem("contacts", contacts.join("||"));
+}
+
+//retrieve records and split them back into an array 
+function getContacts(){
+    let storedContacts = localStorage.getItem("contacts");
+    return storedContacts ? storedContacts.split("||"):[];
+}
 
 //save data as a string with encoded values 
 function setContacts(contacts){
@@ -328,3 +355,188 @@ function submitRecipes(){
         });
     }
 
+let uploadedImageBase64="";
+function submitRecipes(){
+
+    
+        let recipemsg = document.getElementById("recipemsg");
+        //retrieve form inputs
+        let recipeTitle = document.getElementById("recipeTitle").value;
+        let userName = document.getElementById("userName").value;
+        let ingredients = document.getElementById("ingredients").value;
+        let instructions = document.getElementById("recipe").value;
+        
+        //validate inputs
+        if (!recipeTitle || !userName || !ingredients || !instructions ||!uploadedImageBase64) {
+            recipemsg.innerHTML = "Please fill in all fields and upload an image.";
+            return;
+        }
+    
+        
+        //create a new recipe object 
+        let newRecipe = {
+            title:recipeTitle,
+            username:userName,
+            ingredients: ingredients,
+            instructions : instructions,
+            image: uploadedImageBase64, // use the uploaded base64 string 
+        };
+    
+        //retrieve existing blogs or initialize an empty array 
+        let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+    
+        //add the new blog to the blogs array
+        recipes.push(newRecipe);
+    
+        // Save the updated array to localStorage
+        localStorage.setItem("recipes", JSON.stringify(recipes));
+    
+        recipemsg.innerHTML ="Recipe submitted successfully!";
+        document.getElementById("submitRecipesForm").reset();
+        uploadedImageBase64 ="";
+}
+    function uploadImage(){
+        let recipemsg = document.getElementById("recipemsg");
+        let imageFile = document.getElementById("imageFile").files[0];
+    
+        if(!imageFile){
+            recipemsg.innerHTML ="please select an image file to upload.";
+            return;
+        }
+            //convert the image file to a base64 string 
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                uploadedImageBase64 = e.target.result;//store the bas64 string
+                recipemsg.innerHTML ="Image uploaded successfully!";
+    }
+    reader.readAsDataURL(imageFile); // read the file
+    }
+    
+    function displayRecipes(){
+        let recipesContainer = document.getElementById("recipesContainer");
+        let recipemsg = document.getElementById("recipemsg");
+    
+       if(!recipesContainer) return;
+    
+        let recipes = JSON.parse(localStorage.getItem("recipes"))||[];
+    
+        recipesContainer.innerHTML ="";
+    
+        console.log('[Recipes]', recipes);
+    
+        if (recipes.length ==0){
+            recipesContainer.innerHTML = "No recipes posted. Submit your recipe!";
+            return;
+    
+        }
+        // Iterate through recipes and create elements
+        recipes.forEach((recipe, index) => {
+            // Create the recipe card container
+            let recipeCard = document.createElement("div");
+            recipeCard.classList.add("recipe-card");
+    
+            // Create the content container
+            let contentDiv = document.createElement("div");
+            contentDiv.style.flex = "1";
+    
+            // Add title
+            let recipeTitle = document.createElement("h3");
+            recipeTitle.textContent = `Recipe ${index + 1}: ${recipe.title}`;
+            contentDiv.appendChild(recipeTitle);
+
+            // Add title
+            let usernName = document.createElement("h4");
+            userName.textContent = `Recipe ${index + 2}: ${recipe.username}`;
+            contentDiv.appendChild(userName);
+    
+            // Add description
+            let ingredients = document.createElement("p");
+            ingredients.textContent = recipe.ingredients;
+            contentDiv.appendChild(ingredients);
+    
+            // Create the image container
+            let imageDiv = document.createElement("div");
+            imageDiv.style.flex = "0 0 200px";
+    
+            // Add image
+            let recipeImage = document.createElement("img");
+            recipeImage.src = recipe.image;
+            recipeImage.alt = recipe.title;
+            imageDiv.appendChild(recipeImage);
+    
+            // Append content and image to the blog card
+            blogCard.appendChild(contentDiv);
+            blogCard.appendChild(imageDiv);
+    
+            // Append the blog card to the container
+            recipesContainer.appendChild(recipeCard);
+        });
+    }
+
+//checks for recipe.html
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    //run recipes function if on page
+    if (currentPage === "recipes.html") {
+        recipes()
+    }
+
+    //get all checkboxes and allow only one or none to be selected
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', () => {
+        if(checkbox.checked) {
+            checkboxes.forEach(otherBoxes => {
+                if(otherBoxes != checkbox) {
+                    otherBoxes.checked = false;
+                    recipes();
+                }
+            })
+        } else {
+            checkboxes.forEach(otherBoxes => {
+                otherBoxes.checked = false;
+                recipes();
+            })
+        }
+    }))
+})
+
+//Recipes function
+function recipes() {
+    //get box thats checked
+    const checkbox = document.querySelector('input[type=checkbox]:checked')
+
+    //if NO boxes are checked that set ALL to flex
+    if(!checkbox) {
+        document.querySelectorAll('.recipe-card').forEach(recipeCard => {
+            recipeCard.style.display = 'flex';
+        })
+    //if ONE set ALL boxes to none
+    } else {
+        document.querySelectorAll('.recipe-card').forEach(recipeCard => {
+            recipeCard.style.display = 'none';
+        })
+    }
+
+    //whatever box is checked set corrisponding data attribute to flex
+    if(checkbox == document.getElementById('breakfast')) {
+        document.querySelectorAll('[meal-type="breakfast"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    } else if(checkbox == document.getElementById('lunch')) {
+        document.querySelectorAll('[meal-type="lunch"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }  else if(checkbox == document.getElementById('dinner')) {
+        document.querySelectorAll('[meal-type="dinner"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }  else if(checkbox == document.getElementById('dessert')) {
+        document.querySelectorAll('[meal-type="dessert"]').forEach(meal => {
+            meal.style.display = 'flex';
+        })
+    } else if(checkbox == document.getElementById('snacks')) {
+        document.querySelectorAll('[meal-type="snacks"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }
+}
