@@ -351,6 +351,7 @@ function submitRecipes(){
     displayRecipes();
 });
 
+/*
 let uploadedImageBase64="";
 function submitRecipes(){
 
@@ -467,7 +468,7 @@ function submitRecipes(){
             // Append the blog card to the container
             recipesContainer.appendChild(recipeCard);
         });
-    }
+    }*/
 
 //checks for recipe.html
 document.addEventListener("DOMContentLoaded", function () {

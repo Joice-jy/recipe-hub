@@ -42,15 +42,18 @@
 
   body {
 
-    background-color:#f8f1EE;
+    background-color:#F9F7F4;
+    color: #333333;
     padding: 50px;
+    
 
  }
 
  h1 {
   font-family: Taviraj, Georgia, Times, serif;}
 
- .recipeofthemonth, .account {
+
+ .recipeofthemonth, .account{
   
   background-color: #ffffff;
   margin-top: 50px;
@@ -66,7 +69,7 @@
   font-size: 17px;
 }
 
-.trending {
+.trending{
   
   background-color: #ffffff;
   margin-top: 50px;
@@ -82,7 +85,19 @@
   margin: 10px;
 }
 
-.about_me {
+.about_us {
+  font-family: Taviraj, Georgia, Times, serif;
+  background-color: #ffffff;
+  margin-top: 50px;
+  text-align: left;
+  border: 3px solid #BC8F8F;
+  padding: 30px;
+  border-radius: 10px;
+
+}
+
+
+.goal {
   font-family: Taviraj, Georgia, Times, serif;
   background-color: #ffffff;
   margin-top: 50px;
@@ -135,7 +150,7 @@ li{
 
   h2 {
     color: #CC313D;
-    background-color: #F7C5CC;
+    background-color: #FAF3E0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     
