@@ -1,8 +1,8 @@
-function goToPage(page){
-    if(page){
-        window.location.href=page;
-    }else{
-        console.errpr("Invalid page specified for navigation!");
+function goToPage(page) {
+    if (page) {
+        window.location.href = page;
+    } else {
+        console.error("Invalid page specified for navigation!");
     }
 }
 
@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             goToPage("login.html");
         }
     }
-    
-    
+
     const registerForm = document.getElementById("register-form");
     if (registerForm) {
         registerForm.addEventListener("submit", function (e) {
@@ -29,36 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("password").value;
             const confirmPassword = document.getElementById("confirm-password").value;
 
-            if (!username) {
-                alert("Username cannot be empty!");
-                return;
-            }
-            if (!email) {
-                alert("Email cannot be empty!");
-                return;
-            }
-            if (!password) {
-                alert("Password cannot be empty!");
-                return;
-            }
-            if (!confirmPassword) {
-                alert("Confirm Password cannot be empty!");
-                return;
-            }
-            if (!username) {
-                alert("Username cannot be empty!");
-                return;
-            }
-            if (!email) {
-                alert("Email cannot be empty!");
-                return;
-            }
-            if (!password) {
-                alert("Password cannot be empty!");
-                return;
-            }
-            if (!confirmPassword) {
-                alert("Confirm Password cannot be empty!");
+            if (!username || !email || !password || !confirmPassword) {
+                alert("All fields are required!");
                 return;
             }
             if (password !== confirmPassword) {
@@ -66,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-        
             localStorage.setItem("user", JSON.stringify({ username, email, password }));
             localStorage.setItem("isLoggedIn", true);
             alert("Registration successful!");
@@ -88,11 +58,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Invalid username or password!");
                 return;
             }
+
             localStorage.setItem("isLoggedIn", true);
             alert("Login successful!");
             goToPage("index.html");
         });
     }
+
+    const passwordForm = document.getElementById("password-verification-form");
+    const accountDetails = document.getElementById("account-details");
+
+    if (passwordForm) {
+        passwordForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const inputPassword = document.getElementById("verification-password").value.trim();
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+
+            if (!storedUser) {
+                alert("No user data found. Please log in or register.");
+                goToPage("login.html");
+                return;
+            }
+
+            if (inputPassword === storedUser.password) {
+                document.getElementById("account-username").textContent = storedUser.username || "N/A";
+                document.getElementById("account-email").textContent = storedUser.email || "N/A";
+                document.getElementById("account-password").textContent = storedUser.password || "N/A";
+
+                accountDetails.style.display = "block";
+                passwordForm.style.display = "none";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        });
+    }
+
     const logoutLink = document.getElementById("logout-link");
     if (logoutLink) {
         logoutLink.addEventListener("click", function () {
@@ -101,29 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
             goToPage("login.html");
         });
     }
-
-    const accountPage = document.querySelector(".account");
-    if (accountPage) {
-        console.log("Account page detected.");
-
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-        console.log("Stored user data:", storedUser);
-
-        if (!storedUser) {
-            alert("No user data found. Please log in or register");
-            goToPage("login.html");
-            return;
-        }
-
-        document.getElementById("account-username").textContent = storedUser.username || "N/A";
-        document.getElementById("account-email").textContent = storedUser.email || "N/A";
-        document.getElementById("account-password").textContent = storedUser.password || "N/A";
-    } else {
-        console.error("Account page not detected.");
-    }
-    
 });
-
 
 
 
