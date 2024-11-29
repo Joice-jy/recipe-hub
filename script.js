@@ -172,12 +172,12 @@ function displayInbox(){
         messageCard.classList.add("message-card");
 
         // Add name
-        let nameElement = document.createElement("p");
+        let nameElement = document.createElement("h3");
         nameElement.innerHTML = `<strong>Name:</strong> ${name}`;
         messageCard.appendChild(nameElement);
 
         // Add subject
-        let subjectElement = document.createElement("p");
+        let subjectElement = document.createElement("h4");
         subjectElement.innerHTML = `<strong>Subject:</strong> ${subject}`;
         messageCard.appendChild(subjectElement);
 
@@ -206,9 +206,9 @@ function deleteMessage(index){
     setContacts(contacts); // Save the updated array back to localStorage
     displayInbox(); // Refresh the inbox display
 }
- window.onload = function(){
+ /*window.onload = function(){
     displayInbox();
-}
+}*/
 
 let uploadedImageBase64="";
 function submitRecipes(){
@@ -219,7 +219,7 @@ function submitRecipes(){
         let recipeTitle = document.getElementById("recipeTitle").value;
         let userName = document.getElementById("userName").value;
         let ingredients = document.getElementById("ingredients").value;
-        let instructions = document.getElementById("recipe").value;
+        let instructions = document.getElementById("instructions").value;
         
         //validate inputs
         if (!recipeTitle || !userName || !ingredients || !instructions ||!uploadedImageBase64) {
@@ -233,14 +233,14 @@ function submitRecipes(){
             title:recipeTitle,
             username:userName,
             ingredients: ingredients,
-            instructions : instructions,
+            instructions: instructions,
             image: uploadedImageBase64, // use the uploaded base64 string 
         };
     
-        //retrieve existing blogs or initialize an empty array 
+        //retrieve existing recipes or initialize an empty array 
         let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
     
-        //add the new blog to the blogs array
+        //add the new recipe to the recipes array
         recipes.push(newRecipe);
     
         // Save the updated array to localStorage
@@ -299,16 +299,23 @@ function submitRecipes(){
             recipeTitle.textContent = `Recipe ${index + 1}: ${recipe.title}`;
             contentDiv.appendChild(recipeTitle);
 
-            // Add title
-            let usernName = document.createElement("h4");
-            userName.textContent = `Recipe ${index + 2}: ${recipe.username}`;
+            // Add username
+            let userName = document.createElement("h4");
+            userName.textContent = `Recipe by: ${recipe.username}`;
             contentDiv.appendChild(userName);
     
-            // Add description
-            let ingredients = document.createElement("p");
-            ingredients.textContent = recipe.ingredients;
+            // Add ingredients
+            let ingredients = document.createElement("h5");
+            ingredients.innerHTML = `Ingredients:<br><br>${recipe.ingredients.split('\n').join('<br>')}`;
+            //ingredients.textContent = `Ingredients:\n${recipe.ingredients}`;
             contentDiv.appendChild(ingredients);
     
+             // Add instructions
+             let instructions = document.createElement("p");
+             instructions.innerHTML = `Instructions:<br><br>${recipe.instructions.split('\n').join('<br>')}`;
+            //instructions.textContent = recipe.instructions;
+             contentDiv.appendChild(instructions);
+
             // Create the image container
             let imageDiv = document.createElement("div");
             imageDiv.style.flex = "0 0 200px";
@@ -320,11 +327,21 @@ function submitRecipes(){
             imageDiv.appendChild(recipeImage);
     
             // Append content and image to the blog card
-            blogCard.appendChild(contentDiv);
-            blogCard.appendChild(imageDiv);
+            recipeCard.appendChild(contentDiv);
+            recipeCard.appendChild(imageDiv);
     
             // Append the blog card to the container
             recipesContainer.appendChild(recipeCard);
         });
     }
+   /* window.onload = function(){
+        console.log('onload');
+        displayRecipes(); 
+    }*/
+
+    window.addEventListener('load', displayInbox);
+    window.addEventListener('load', () => {
+    console.log('onload');
+    displayRecipes();
+});
 
