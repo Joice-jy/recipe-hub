@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Recipe Hub</h1>
+        <p> Recipes at your fingertips</p>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="account.html">My Account</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="inbox.html">Inbox</a>
+            <a href="submit.html">Submit Recipe</a>
+            <a href="login.html">Login</a>
+            <a href="javascript:void(0)" id="logout-link">Logout</a>
+        
+        </div>
+    </div>
+
+    <div class ="recipesubmission">
+        <h1>Submit Your Recipes!</h1><br>
+
+        <h2>Share your recipes to our community!</h2><br>
+
+
+        <fieldset>
+        
+        
+            <form id="submitRecipesForm">
+                <label for="recipeTitle">Recipe Title: </label><br>
+                <input type="text" id="recipeTitle" name="recipeTitle" placeholder="Enter the Recipe Title" required><br><br>
+
+                <label for="userName">Username: </label><br>
+                <input type="text" id="userName" name="userName" placeholder="Enter the Username" required><br><br>
+                
+                <label for="ingredients">Ingredients: </label><br>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Enter the Ingredients" required><br><br>
+    
+                <label for="instructions">Recipe Instructions: </label><br>
+                <textarea id="instructions" name="instructions" placeholder="Enter the instructions" required></textarea><br><br>
+    
+                <label for="imageFile">Image:</label><br>
+                 <input type="file" id="imageFile" accept="image/*" onchange="uploadImage()" placeholder="Choose image" required>
+                 <button type="button" id="uploadButton" onclick="uploadImage()">Upload</button><br><br>
+
+                
+                <button type="button" id="submitbtn" onclick="submitRecipes()">Submit</button>
+          
+    
+            </form>
+    
+        </fieldset>
+
+    </div>
+    
+
+<div id="recipemsg"></div><br>
+
+
+
+<br>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Recipe Hub. All rights reserved.</p>
+        <address>
+            Written by <a href="mailto:webmaster@example.com">Recipe Hub</a>.<br> 
+            Visit us at:<br>
+            Example.com<br>
+            Box 564, Disneyland<br>
+            Canada
+        </address>
+    </div>
+</body>
+</html>

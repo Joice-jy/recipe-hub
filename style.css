@@ -54,7 +54,7 @@
  h1 {
   font-family: Taviraj, Georgia, Times, serif;}
 
- .recipeofthemonth {
+ .recipeofthemonth, .account {
   
   background-color: #ffffff;
   margin-top: 50px;
@@ -373,6 +373,101 @@ th {
   border: 3px solid #BC8F8F;
   padding: 30px;
   border-radius: 10px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+.button:hover {
+    background-color: #45a049; 
+  }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  input[type="file"] {
+    width: 100%;
+    max-width: 300px; 
+    display: inline-block; 
+    box-sizing: border-box;
+    padding: 5px; 
+    font-size: 14px; 
+}
+
+form button {
+
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; 
+  color: white; 
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recipe-container {
+  margin: 10px;
+  padding: 10px;
+  background-color: #C1A584;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+  height: auto; 
+  border: 2px solid black;
+}
+
+.recipe-card {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.recipe-image {
+  width: 250px; 
+  height: 250px;
+  margin-bottom: 10px; 
+}
+
+.recipe-description {
+  width: 100%; 
+  margin-top: 10px;
+}
+
+.recipe-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.recipe-rating {
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 1.5em;
+  color: gold;
+}
+
+
+#inboxMessage h2{
+  color: #333333;
+}
   }
 
   .goal p{
