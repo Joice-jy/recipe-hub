@@ -27,10 +27,17 @@
     </div>
 
     <div class="account">
-        <h1>My account<h1>    
-        <p><strong>Username:</strong> <span id="account-username"></span></p>
-        <p><strong>Email:</strong> <span id="account-email"></span></p>
-        <p><strong>Password:</strong> <span id="account-password"></span></p>
+        <h1>My Account</h1>
+        <form id="password-verification-form">
+            <label for="verification-password">Enter Password to View Account:</label><br>
+            <input type="password" id="verification-password" name="verification-password"><br><br>
+            <button type="submit">Verify</button>
+        </form>
+        <div id="account-details" style="display: none;">
+            <p><strong>Username:</strong> <span id="account-username"></span></p>
+            <p><strong>Email:</strong> <span id="account-email"></span></p>
+            <p><strong>Password:</strong> <span id="account-password"></span></p>
+        </div>
     </div>
 
     <div id="recipe">
