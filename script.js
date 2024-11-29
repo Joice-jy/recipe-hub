@@ -25,6 +25,22 @@ document.addEventListener("DOMContentLoaded", function () {
             const password = document.getElementById("password").value;
             const confirmPassword = document.getElementById("confirm-password").value;
 
+            if (!username) {
+                alert("Username cannot be empty!");
+                return;
+            }
+            if (!email) {
+                alert("Email cannot be empty!");
+                return;
+            }
+            if (!password) {
+                alert("Password cannot be empty!");
+                return;
+            }
+            if (!confirmPassword) {
+                alert("Confirm Password cannot be empty!");
+                return;
+            }
             if (password !== confirmPassword) {
                 alert("Passwords do not match!");
                 return;
@@ -86,6 +102,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Account page not detected.");
     }    
 });
+
+//save data as a string with encoded values 
+function setContacts(contacts){
+    localStorage.setItem("contacts", contacts.join("||"));
+}
+
+//retrieve records and split them back into an array 
+function getContacts(){
+    let storedContacts = localStorage.getItem("contacts");
+    return storedContacts ? storedContacts.split("||"):[];
+}
 
 function submitContact(){
     {
@@ -175,3 +202,70 @@ function deleteMessage(index){
     displayInbox();
 }
 
+//checks for recipe.html
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    //run recipes function if on page
+    if (currentPage === "recipes.html") {
+        recipes()
+    }
+
+    //get all checkboxes and allow only one or none to be selected
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]')
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', () => {
+        if(checkbox.checked) {
+            checkboxes.forEach(otherBoxes => {
+                if(otherBoxes != checkbox) {
+                    otherBoxes.checked = false;
+                    recipes();
+                }
+            })
+        } else {
+            checkboxes.forEach(otherBoxes => {
+                otherBoxes.checked = false;
+                recipes();
+            })
+        }
+    }))
+})
+
+//Recipes function
+function recipes() {
+    //get box thats checked
+    const checkbox = document.querySelector('input[type=checkbox]:checked')
+
+    //if NO boxes are checked that set ALL to flex
+    if(!checkbox) {
+        document.querySelectorAll('.recipe-card').forEach(recipeCard => {
+            recipeCard.style.display = 'flex';
+        })
+    //if ONE set ALL boxes to none
+    } else {
+        document.querySelectorAll('.recipe-card').forEach(recipeCard => {
+            recipeCard.style.display = 'none';
+        })
+    }
+
+    //whatever box is checked set corrisponding data attribute to flex
+    if(checkbox == document.getElementById('breakfast')) {
+        document.querySelectorAll('[meal-type="breakfast"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    } else if(checkbox == document.getElementById('lunch')) {
+        document.querySelectorAll('[meal-type="lunch"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }  else if(checkbox == document.getElementById('dinner')) {
+        document.querySelectorAll('[meal-type="dinner"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }  else if(checkbox == document.getElementById('dessert')) {
+        document.querySelectorAll('[meal-type="dessert"]').forEach(meal => {
+            meal.style.display = 'flex';
+        })
+    } else if(checkbox == document.getElementById('snacks')) {
+        document.querySelectorAll('[meal-type="snacks"]').forEach(meal => {
+            meal.style.display = 'flex';
+        });
+    }
+}
