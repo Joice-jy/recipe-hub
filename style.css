@@ -93,7 +93,7 @@
 
 }
 
-.mycourses{
+.linkToSubmissionPage{
 
   font-family: Taviraj, Georgia, Times, serif;
   background-color: #ffffff;
@@ -111,7 +111,7 @@ caption{
 
 ul {
   list-style-type: square;
-  padding-left: 0;
+  padding-left: 10px;
   margin:0;
   display: inline-block;
   
@@ -124,28 +124,6 @@ li{
   padding-bottom: 10px;
 }
 
-table {
-  width: 100%;
-  background-color: #FFF0F5;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-
-
-}
-
-th, td{
-  border: 1px solid black ;
-  text-align: right;
-  width: 25%;
-  padding: 12px;
-
-}
-
-th {
-  
-  font-weight: bold;
-  background-color: #DB7093;
-}
 
   
   .footer {
@@ -167,117 +145,6 @@ th {
   }
 
  
-
-  .hobby {
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  text-align: left;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-  }
-
-  .hobby ul li{
-
-    padding: 10px;
-    margin-left: 35px;
-    
-
-  }
-  
-  
-
-  .outdooractivities{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    color:#317773;
-    padding: 20px;
-    
-  }
-
-  .indooractivities{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    color:#832B00;
-    padding: 20px;
-  }
-
-
-  .websites{
-
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  text-align: left;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-
-
-
-  }
-
-  .websites ul{
-    padding: 10px;
-    
-  }
-
-  .websites li{
-    padding:10px;
-    font-size: 16px;
-    
-    
-  }
- 
-  .websites li a {
-    text-decoration: none;
-    padding: 10px;
-  }
-
-  .websites a:hover {
-    background-color: #FCEDDA;
-    color:  #EE4E34;
-    
-  }
-  .gallery{
-
-  font-family: Taviraj, Georgia, Times, serif;
-  background-color: #ffffff;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: 3px solid #BC8F8F;
-  padding: 30px;
-  border-radius: 10px;
-
-  }
-  img {
-    border: 5px solid #ccc;
-    padding: 5px;
-    margin: 8px;
-    border-radius: 10px;
-  }
-
-  .video-section {
-    border: 5px solid #ccc;
-    width: 500px;
-    height: 300px;
-    padding: 8px;
-    padding-top:0;
-    margin : 10px;
-    border-radius: 10px;
-  }
-
-  .video-section video {
-    
-    width: 500px;
-    height: 300px;
-    
-    
-  }
-
 
   .contact{
     font-family: Taviraj, Georgia, Times, serif;
@@ -433,8 +300,76 @@ form button {
   padding: 15px;
   display: flex;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
+
+.recipe-card h3{
+  text-align: center;
+  font: size 1.5em;
+  margin-bottom: 10px;
+}
+
+.recipe-card h4{
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.recipe-card h5{
+  
+  font-style: bold;
+  background-color: rgb(240, 227, 232);
+  padding: 10px;
+}
+
+.recipe-card p{
+  
+  
+  background-color: rgb(240, 227, 232);
+  padding: 10px;
+}
+
+#inboxContainer {
+  max-width: 800px;
+  background-color: #ddd;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.message-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.message-card h2 {
+  margin: 8px 0;
+  background-color: #ddd;
+}
+.message-card h4 {
+  margin: 8px 0;
+}
+
+.message-card p {
+  margin: 8px 0;
+}
+
+.message-card button {
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-card button:hover {
+  background-color: #d32f2f;
+}
+
 
 .recipe-image {
   width: 250px; 
